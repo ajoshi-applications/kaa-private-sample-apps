@@ -11,7 +11,7 @@ public class MongoClientFactory extends AbstractMongoService {
     public MongoClient getMongoClient() {
         MongoClient mongoClient = null;
         try {
-            mongoClient = new MongoClient(this.getMongoProperties().getProperty("server", "host"));
+            mongoClient = new MongoClient(this.getMongoProperties().getProperty("server", "port"));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
